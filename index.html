@@ -8,106 +8,131 @@
 			Word Exists Documentation by Brandon Suen
 		</title>
 		<link href="./favicon.png" rel="icon" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link href="./index.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<nav id="navbar">
-			<header>
-				<h1>Word Exists Documentation</h1>
-				<p>
-					An
-					<a href="https://www.npmjs.com/package/word-exists">NPM package</a> to
-					check if a word exists or not in English with no extra dependencies
-					that works offline
-				</p>
-				<a href="https://github.com/Brandons42/word-exists"
-					>Github repository</a
-				>
-			</header>
-			<a class="nav-link" href="#installation">Installation</a>
-			<a class="nav-link" href="#usage">Usage</a>
-			<a class="nav-link" href="#example_values">Example Values</a>
-			<a class="nav-link" href="#speed_tests">Speed Tests</a>
-			<a class="nav-link" href="#author">Author</a>
-		</nav>
-		<main id="main-doc">
-			<section class="main-section" id="installation">
-				<header><h2>Installation</h2></header>
-				<p>You can use NPM:</p>
-				<code>npm install word-exists --save</code>
-				<p>Or Yarn:</p>
-				<code>yarn add word-exists</code>
-			</section>
-			<section class="main-section" id="usage">
-				<header><h2>Usage</h2></header>
-				<p>
-					Simply pass in a string as a parameter and a Boolean will be output.
-					Hyphenated compound words aren't counted as words.
-				</p>
-				<code>const wordExists = require('wordExists');</code>
-				<code>wordExists('word');</code>
-				<code>//true</code>
-				<code>wordExists('notaword');</code>
-				<code>//false</code>
-			</section>
-			<section class="main-section" id="example_values">
-				<header><h2>Example Values</h2></header>
-				<table>
-					<thead>
-						<tr>
-							<th>Word</th>
-							<th>Output</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><code>'hello'</code></td>
-							<td><code>true</code></td>
-						</tr>
-						<tr>
-							<td><code>'olleh'</code></td>
-							<td><code>false</code></td>
-						</tr>
-						<tr>
-							<td><code>'tic-tac-toe'</code></td>
-							<td><code>false</code></td>
-						</tr>
-						<tr>
-							<td><code>9</code></td>
-							<td><code>TypeError</code></td>
-						</tr>
-					</tbody>
-				</table>
-				<p>
-					For more examples, see the
-					<a
-						href="https://github.com/Brandons42/word-exists/blob/master/wordExists.test.js"
-						>tests</a
-					>.
-				</p>
-			</section>
-			<section class="main-section" id="speed_tests">
-				<header><h2>Speed Tests</h2></header>
-				<p>
-					The below speed tests are run as you load the page and will likely
-					change if you reload the page. 3 iterations of each test are run.
-				</p>
-				<code>wordExists('amphidiploidies')</code>
-				<ul></ul>
-				<code>wordExists('zooxanthellae')</code>
-				<ul></ul>
-				<code>wordExists('superlongstringthatisntevenaword')</code>
-				<ul></ul>
-			</section>
-			<section class="main-section" id="author">
-				<header><h2>Author</h2></header>
-				<p>
-					This package was created by
-					<a href="https://bsuen.netlify.app/">Brandon Suen</a>.
-				</p>
-			</section>
-		</main>
-		<script src="./index.js"></script>
-		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<div id="wrapper">
+			<nav id="navbar">
+				<header>
+					<h1>Word Exists Documentation</h1>
+					<a href="https://badge.fury.io/js/word-exists"
+						><img
+							alt="npm version"
+							height="18"
+							src="https://badge.fury.io/js/word-exists.svg"
+					/></a>
+					<p>
+						An NPM package to check if a word exists or not in English with no
+						extra dependencies that works offline
+					</p>
+				</header>
+				<section>
+					<a class="nav-link" href="#installation">Installation</a>
+					<a class="nav-link" href="#usage">Usage</a>
+					<a class="nav-link" href="#example_values">Example Values</a>
+					<a class="nav-link" href="#speed_tests">Speed Tests</a>
+					<a class="nav-link" href="#author">Author</a>
+					<a href="https://github.com/Brandons42/word-exists" target="_blank"
+						>Github Repository</a
+					>
+				</section>
+			</nav>
+			<main id="main-doc">
+				<section class="main-section" id="installation">
+					<header><h2>Installation</h2></header>
+					<p>You can use NPM:</p>
+					<code>npm install word-exists --save</code>
+					<p>Or Yarn:</p>
+					<code>yarn add word-exists</code>
+				</section>
+				<section class="main-section" id="usage">
+					<header><h2>Usage</h2></header>
+					<p>
+						Simply pass in a string as a parameter and a Boolean will be output.
+					</p>
+					<code>const wordExists = require('wordExists');</code>
+					<br />
+					<br />
+					<code>wordExists('word');</code>
+					<br />
+					<code>//true</code>
+					<br />
+					<br />
+					<code>wordExists('notaword');</code>
+					<br />
+					<code>//false</code>
+					<p>Hyphenated compound words aren't counted as words.</p>
+				</section>
+				<section class="main-section" id="example_values">
+					<header><h2>Example Values</h2></header>
+					<table>
+						<thead>
+							<tr>
+								<th><p>Word</p></th>
+								<th><p>Output</p></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>'hello'</code></td>
+								<td><code>true</code></td>
+							</tr>
+							<tr>
+								<td><code>'olleh'</code></td>
+								<td><code>false</code></td>
+							</tr>
+							<tr>
+								<td><code>'tic-tac-toe'</code></td>
+								<td><code>false</code></td>
+							</tr>
+							<tr>
+								<td><code>9</code></td>
+								<td><code>TypeError</code></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						For more examples, see the
+						<a
+							href="https://github.com/Brandons42/word-exists/blob/master/wordExists.test.js"
+							>tests</a
+						>.
+					</p>
+				</section>
+				<section class="main-section" id="speed_tests">
+					<header><h2>Speed Tests</h2></header>
+					<p>
+						3 iterations of each of the below tests are run. In each iteration,
+						the function is run 1,000 times.
+					</p>
+					<code>wordExists('amphidiploidies') //Run 1,000 times</code>
+					<ul></ul>
+					<code>wordExists('zooxanthellae') //Run 1,000 times</code>
+					<ul></ul>
+					<code
+						>wordExists('superlongstringthatisntevenaword') //Run 1,000
+						times</code
+					>
+					<ul></ul>
+					<p>
+						The above speed tests are run as you load the page and will likely
+						change if you reload the page.
+					</p>
+				</section>
+				<section class="main-section" id="author">
+					<header><h2>Author</h2></header>
+					<p>
+						This package was created by
+						<a href="https://bsuen.netlify.app/">Brandon Suen</a>.
+					</p>
+				</section>
+			</main>
+			<script src="./index.js"></script>
+			<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		</div>
 	</body>
 </html>
